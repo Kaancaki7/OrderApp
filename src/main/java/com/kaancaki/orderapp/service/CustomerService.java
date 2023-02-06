@@ -15,4 +15,6 @@ public interface CustomerService {
     List<Customer> findByNameContainsIgnoreCase(char query);
 
     List<Customer> findByDateOfRegistrationMonth(int month);
+
+    List<Customer> findByIds(List<Long> ids);
 }

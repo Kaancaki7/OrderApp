@@ -54,5 +54,12 @@ public class CustomerServiceImpl implements CustomerService {
         return customerList;
     }
 
+    @Override
+    public List<Customer> findByIds(List<Long> ids) {
+        List<Customer> customerList = customerEntityService.findByIds(ids);
+
+        return customerList;
+    }
+
 
 }

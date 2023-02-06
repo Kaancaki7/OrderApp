@@ -52,17 +52,10 @@ public class CustomerEntityService {
         return customerList;
     }
 
-//    public List<Customer> findByContainingLetter(char query) {
-//
-//        List<Customer> customerList = customerDao.findByNameContainsIgnoreCase(query);
-//        if (customerList.isEmpty() || customerList == null) {
-//            return new ArrayList<>();
-//        }
-//
-//        return customerList;
-//    }
-//
-//    public List<Customer> filterRegistrationDate(int month) {
-//        return customerDao.findByDateOfRegistration_MonthValue(month);
-//    }
+    public List<Customer> findByIds(List<Long> ids) {
+        List<Customer> customerList = customerDao.findByIds(ids);
+
+        return customerList;
+    }
+
 }
